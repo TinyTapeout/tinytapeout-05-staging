@@ -1,0 +1,39 @@
+name: formal
+
+on:
+  workflow_dispatch:
+  push:
+    # Don't run on project submissions:
+    branches-ignore:
+      - projects/tt_um_*
+  pull_request:
+    # Don't run on project submissions:
+    paths-ignore:
+      - projects/tt_um_*/**
+
+jobs:
+  formal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: install oss-cad-suite (cocotb / iverilog)
+        uses: YosysHQ/setup-oss-cad-suite@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - run: |
+          yosys --version
+
+      - name: Python requirements
+        run: pip3 install -r tt-multiplexer/py/requirements.txt
+
+      - name: formal tristate
+        working-directory: tt-multiplexer
+        run: make formal_tristate
+
+      - name: formal tristate
+        working-directory: tt-multiplexer
+        run: make formal_connectivity
