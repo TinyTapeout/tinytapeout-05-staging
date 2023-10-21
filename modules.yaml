@@ -10,3 +10,7 @@ modules:
     width: 1
     height: 1
     pg_vdd: true
+  - name: "urish_simon"
+    width: 1
+    height: 1
+    pg_vdd: true
