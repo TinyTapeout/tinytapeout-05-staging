@@ -15,7 +15,7 @@ coco_test: mux_ext.hex
 	mkdir sim_build/
 
 	# change project_tb.v to match your testbench name
-	iverilog -Ttyp -DFUNCTIONAL -DSIM -DUSE_POWER_PINS -DUNIT_DELAY=#1 \
+	iverilog -Ttyp -DFUNCTIONAL -DSIM -DUNIT_DELAY=#1 \
 	-f$(VERILOG_PATH)/includes/includes.rtl.caravel \
 	-f$(abspath ../../includes/includes.rtl.caravel_user_project) -I $(abspath ../../rtl/tt-multiplexer/rtl) -o sim_build/sim.vvp mux_ext_tb.v
 
