@@ -15,7 +15,6 @@ WAVES         ?= no
 TOPLEVEL      ?= test_mux_tb
 MODULE        ?= test_mux
 TOPLEVEL_LANG ?= verilog
-COMPILE_ARGS  += -DUSE_POWER_PINS
 COMPILE_ARGS  += -DMPRJ_IO_PADS=38
 COMPILE_ARGS  += -DSIM_$(shell echo $(SIM) | tr a-z A-Z)=1
 COMPILE_ARGS  += -DROM_VMEM_PATH=\"../../../tt/rom/rom.vmem\"
