@@ -99,9 +99,9 @@ async def test_rom(dut):
 
     dut.uio_in.value = 0
     dut.ui_in.value = 0
-    # select test design
+    # select ROM design
     dut.reset_n.value = 0
-    await enable_design(dut, 0, 0)
+    await enable_design(dut, 7, 11)
 
     dut._log.info("test loopback")
     buf = bytearray(128)
