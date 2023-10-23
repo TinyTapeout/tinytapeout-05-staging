@@ -7,9 +7,12 @@ modules:
     x: 6
     y: 11
   - name: "urish_ringosc_cnt"
+    x: 0
+    y: 6
     width: 1
     height: 1
     pg_vdd: true
+    analog: true
   - name: "urish_simon"
     width: 1
     height: 1
