@@ -3,6 +3,7 @@
   "repo": "https://github.com/TinyTapeout/tt05-ringosc-counter",
   "commit": "3717208f1e457b03587a497a6453cd541a4916a2",
   "workflow_url": "https://github.com/TinyTapeout/tt05-ringosc-counter/actions/runs/6615590239",
-  "sort_id": 1697375363031,
-  "openlane_version": "OpenLane2 2.0.0b15"
+  "sort_id": 1698484894486,
+  "openlane_version": "OpenLane2 2.0.0b15",
+  "power_gate": true
 }
