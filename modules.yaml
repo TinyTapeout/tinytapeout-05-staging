@@ -19,8 +19,8 @@ modules:
     pg_vdd: true
   - name: "tt05_analog_test"
     x: 0
-    y: 6
+    y: 5
     width: 1
-    height: 1
+    height: 2
     pg_vdd: true
     analog: true
